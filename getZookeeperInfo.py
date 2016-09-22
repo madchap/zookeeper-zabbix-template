@@ -53,7 +53,7 @@ class ZooKeeperCommands(object):
         self._value = {}
         if self._zkCommand == 'mntr':
             for line in self._value_raw.splitlines():
-                parts = line.split('	')
+                parts = line.split()
                 index = parts[0]
                 self._value[index] = parts[1]
         elif self._zkCommand == 'conf':
